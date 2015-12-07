@@ -14,6 +14,7 @@ public class ArtefatoT extends Artifact {
 		ObsProperty prop = getObsProperty("count");
 		prop.updateValue(prop.intValue()+1);
 		signal("tick");
+	
 	}
 }
 

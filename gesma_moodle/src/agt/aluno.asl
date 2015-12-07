@@ -4,11 +4,17 @@
 
 /* Initial goals */
 
-!start.
+//!start.
+!conectar.
 
 /* Plans */
 
 +!start : true <- .print("hello world.").
+
++!conectar : true
+	<- makeArtifact("conexao", "hibernate.ConectandoBanco", [], Artid);
+	focus(Artid);
+	exec.
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }

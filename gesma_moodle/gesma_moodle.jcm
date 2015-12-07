@@ -10,7 +10,7 @@
 
 mas gesma_moodle {
 
-    agent sample_agent
+    agent aluno
     
 /* 
    agent definition

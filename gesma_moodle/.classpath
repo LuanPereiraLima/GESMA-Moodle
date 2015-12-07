@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry excluding="**/*.asl" kind="src" path="src/agt" />
-	<classpathentry excluding="*.ptl" kind="src" path="src/int" />
-	<classpathentry excluding="*.xml" kind="src" path="src/org" />
-	<classpathentry kind="src" path="src/env" />
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JaCaMo"/>	<classpathentry kind="output" path="bin/classes"/></classpath>
+	<classpathentry excluding="**/*.asl" kind="src" path="src/agt"/>
+	<classpathentry excluding="*.ptl" kind="src" path="src/int"/>
+	<classpathentry excluding="*.xml" kind="src" path="src/org"/>
+	<classpathentry kind="src" path="src/env"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JaCaMo"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/xalan.jar"/>
+	<classpathentry kind="lib" path="lib/cglib-3.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.0-801.jdbc4.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="lib/javassist.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-3.5.2-complete.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-core-5.0.4.Final.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
