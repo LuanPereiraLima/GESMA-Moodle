@@ -16,7 +16,12 @@
 <role-definitions>
 	<role id="aluno" />
 	<role id="tutor" />
-	<role id="agente_sistema" />
+	<role id="acompanhante_professor" />
+	<role id="acompanhante_tutor" />
+	<role id="ajudante" />
+	<role id="companheiro" />
+	<role id="formador" />
+	<role id="coordenador" />
 </role-definitions>
 
 <group-specification id="grp_moodle">
@@ -31,19 +36,16 @@
     	
     	<group-specification id="agentes_sistema_moodle">
 	    	<roles>
-		        <role id="agente_sistema" min="1" />
+		        <role id="acompanhante_professor" min="1"/>
+				<role id="acompanhante_tutor" min="1"/>
+				<role id="ajudante"  min="1"/>
+				<role id="companheiro" min="1"/>
+				<role id="formador" min="1"/>
+				<role id="coordenador" min="1"/>
 	    	</roles>
     	</group-specification>
     
     </subgroups>
- 
-    <!--links>
-       <link from="role1" to="role2" type="authority"     scope="intra-group" bi-dir="false"/>
-       <link from="role2" to="role1" type="communication" scope="intra-group" bi-dir="false"/>
-    </links-->
-    <!--formation-constraints>
-       <compatibility from="role1" to="role2" />
-    </formation-constraints-->
 </group-specification>
 </structural-specification>
 
@@ -56,6 +58,33 @@
                 <goal id="verificar_postagem" ttf="20 minutes" ds="fazer com que os agentes verifiquem existencia da postagem" />
                 <goal id="gerar_avaliacao_desempenho" ttf="20 minutes" ds="gerar avaliacao a partir dos comportamentos dos agentes" />
                 <goal id="verificar_comentario" ttf="20 minutes" ds="fazer com que os agentes verifiquem existencia da comentario" />
+                <!--  -->
+                <goal id="informarNotasAtrasadas" ttf="20 minutes" ds="Informar ao professor da disciplina que existem notas atrasadas." />
+                <goal id="alunosParticipantes" ttf="20 minutes" ds="Informar ao professor da disciplina com uma mensagem sobre os alunos que ainda não participaram dos fóruns da disciplina ou não receberam notas pela sua participação." />
+                <goal id="informarNovaDisciplina" ttf="20 minutes" ds="Informar aos professores que uma nova disciplina foi criada." />
+                <goal id="mantemForumAtivo" ttf="20 minutes" ds="Informar aos professores que os alunos não estão publicando no fórum." />
+                <goal id="mantemTutorAtivo" ttf="20 minutes" ds="Informar aos professores que os mesmos devem participar mais nos fóruns." />
+                <goal id="notificaCoordenadorDeTutores" ttf="20 minutes" ds="Informar aos coordenadores os tutores que não estão participando dos fóruns." />
+                <goal id="tutoresParticipantes" ttf="20 minutes" ds="Informar ao professor que o mesmo não está participando dos fóruns da disciplina." />
+                <goal id="exibirDicasCalendario" ttf="20 minutes" ds="Informar ao sobre as funcionalidades do calendário do moodle." />
+                <goal id="exibirDicasConfiguracoes" ttf="20 minutes" ds="Informar aos alunos sobre as funcionalidades de configuração do moodle." />
+                <goal id="exibirDicasForuns" ttf="20 minutes" ds="Informar aos alunos sobre as funcionalidades do fórum do moodle." />
+                <goal id="exibirDicasParticipantes" ttf="20 minutes" ds="Informar aos alunos como ele pode conhecer os participantes da sua turma e professores." />
+                <goal id="criaChat" ttf="20 minutes" ds="Criar chat para as atividades de questionarios para que os alunos possam discutir." />
+                <goal id="informarAndamento" ttf="20 minutes" ds="Informar ao aluno as suas notas em cada atividade, ao final será apresentado uma média e um pedido de esforço caso o aluno esteja abaixo da média ou um elogio caso esteja acima da média." />
+                <goal id="mostraNovaDisciplina" ttf="20 minutes" ds="Informar ao aluno a nova disciplina criada e que ele deve ler o conteúdo na pagina inicial da disciplina." />
+                <goal id="pesquisarDatas" ttf="20 minutes" ds="Informar ao aluno sobre as datas de encerramentos das atividades da disciplina que estão pendentes." />
+                <goal id="verificarEvasao" ttf="20 minutes" ds="Verificar se o aluno está acessando o moodle, caso não esteja acessando será enviado um email para o mesmo informando o seu ultimo acesso." />
+                <goal id="comunicarFormadorAgNotasBaixas" ttf="20 minutes" ds="" />
+                <goal id="comunicarAcompanhanteTutorAgNotasBaixas" ttf="20 minutes" ds="" />
+                <goal id="comunicarPedagogicoAgNotasBaixas" ttf="20 minutes" ds="" />
+                <goal id="comunicarAcompanhanteTutorAgAtividadesEncerrando" ttf="20 minutes" ds="" />
+                <goal id="formarGrupos" ttf="20 minutes" ds="Formar grupos de estudo entre alunos de uma disciplina." />
+                <goal id="informarAtividadesDisciplina" ttf="20 minutes" ds="Informar todas as atividades da Disciplina para cada aluno daquela disciplina." />
+                <goal id="informarPreRequisito" ttf="20 minutes" ds="Informar aos alunos as disciplinas que são pré-requisitos da disciplina que ele está fazendo." />
+                <goal id="rientarAlunoNotaBaixa" ttf="20 minutes" ds="Orientar os alunos da disciplinas que estão com notas baixas." />
+                <goal id="verificacaoDoAgenteAc" ttf="20 minutes" ds="" />
+                <goal id="requisicaoAgenteAc" ttf="20 minutes" ds="" />
             </plan>
         </goal>
         
