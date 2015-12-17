@@ -11,7 +11,7 @@
 		 </property>
 		 <!-- Assume test is the database name -->
 		  <property name="hibernate.connection.url">
-		 	jdbc:postgresql://localhost/teste
+		 	jdbc:postgresql://localhost/moodle
 		 </property>
 		 <property name="hibernate.connection.username">
 		 	postgres
@@ -21,6 +21,6 @@
 		 </property>
 		 
 		 <!-- List of XML mapping files -->
-		 <mapping resource="src/env/hibernate/mapeamento_ObjTeste.hbm.xml"/>
+		 <mapping resource="src/env/hibernate/mapeamento_Curso.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

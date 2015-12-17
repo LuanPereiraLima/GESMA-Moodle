@@ -3,14 +3,15 @@
 "-//Hibernate/Hibernate Mapping DTD//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	 <class name="hibernate.ObjTeste" table="objeto">
+	 <class name="hibernate.Curso" table="mdl_course">
 		 <meta attribute="class-description">
-		 	A classe contém os detalhes do objeto
+		 	A classe contém os detalhes sobre o curso em questão
 		 </meta>
 		 <id name="id" type="int" column="id">
 		 	<generator class="native"/>
 		 </id>
-		 <property name="nome" column="nome" type="string"/>
-		 <property name="salario" column="salario" type="int"/>
+		 <property name="idNumber" column="idnumber" type="string"/>
+		 <property name="fullName" column="fullname" type="string"/>
+		 <property name="timeCreated" column="timecreated" type="long"/>
 	 </class>
 </hibernate-mapping>

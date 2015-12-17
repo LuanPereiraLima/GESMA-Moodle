@@ -4,13 +4,13 @@ package hibernate;
 
 import cartago.*;
 
-public class ConectandoBanco extends Artifact {
+public class ArtefatoConexaoCurso extends Artifact {
 	void init(int initialValue) {
 	}
 	
 	@OPERATION
 	void exec() {
-		ManageObjeto a = new ManageObjeto();
+		ManageCurso a = new ManageCurso();
 		a.main();
 	}
 }

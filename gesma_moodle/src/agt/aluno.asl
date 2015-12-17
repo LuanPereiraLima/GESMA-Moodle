@@ -12,7 +12,7 @@
 +!start : true <- .print("hello world.").
 
 +!conectar : true
-	<- makeArtifact("conexao", "hibernate.ConectandoBanco", [], Artid);
+	<- makeArtifact("conexao", "hibernate.ArtefatoConexaoCurso", [], Artid);
 	focus(Artid);
 	exec.
 
