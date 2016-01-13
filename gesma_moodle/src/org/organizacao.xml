@@ -58,7 +58,7 @@
                 <goal id="verificar_postagem" ttf="20 minutes" ds="fazer com que os agentes verifiquem existencia da postagem" />
                 <goal id="gerar_avaliacao_desempenho" ttf="20 minutes" ds="gerar avaliacao a partir dos comportamentos dos agentes" />
                 <goal id="verificar_comentario" ttf="20 minutes" ds="fazer com que os agentes verifiquem existencia da comentario" />
-                <!--  -->
+                <!-- mas e aki? -->
                 <goal id="informarNotasAtrasadas" ttf="20 minutes" ds="Informar ao professor da disciplina que existem notas atrasadas." />
                 <goal id="alunosParticipantes" ttf="20 minutes" ds="Informar ao professor da disciplina com uma mensagem sobre os alunos que ainda não participaram dos fóruns da disciplina ou não receberam notas pela sua participação." />
                 <goal id="informarNovaDisciplina" ttf="20 minutes" ds="Informar aos professores que uma nova disciplina foi criada." />

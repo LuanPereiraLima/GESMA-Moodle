@@ -10,7 +10,7 @@
 
 mas gesma_moodle {
 
-    agent aluno
+    agent acompanhante_de_tutor
     
 /* 
    agent definition

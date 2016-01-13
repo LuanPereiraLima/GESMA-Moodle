@@ -20,10 +20,10 @@ public class ManageCurso {
 			 throw new ExceptionInInitializerError(ex);
 		}
 		ManageCurso ME = new ManageCurso();
-		ME.listObjetos();
+		//ME.listObjetos();
 	 }
 	 
-	 public void listObjetos(){
+	 public void listarCursosMaioresQueOTimePassado(long time){
 		 Session session = factory.openSession();
 		 Transaction tx = null;
 		 try{
@@ -31,7 +31,7 @@ public class ManageCurso {
 			 tx = session.beginTransaction();
 		 
 			 Query query = session.createQuery("FROM Curso where timecreated > :time");
-			 query.setParameter("time", 1450246077l);
+			 query.setParameter("time", time);
 			 List<Curso> objetos = query.list();
 		
 			 for (Curso ob : objetos){
