@@ -3,6 +3,7 @@
 package gesma_moodle;
 
 import java.util.Date;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,18 +22,28 @@ public class Tempo extends Artifact{
 	void init() {
 		Date data = new Date();
 		defineObsProperty("time", data.getTime());
-		Timer tempo = new Timer();
-		tempo.schedule(tick, 0, INTERVALO_TEMPO);
+		//Timer tempo = new Timer();
+		execInternalOp("countRelogio");
+		//tempo.schedule(tick, 0, INTERVALO_TEMPO);
 	}
 	
-	TimerTask tick = new TimerTask() {
+	/*TimerTask tick = new TimerTask() {
 		@Override
 		public void run() {
 			Date data = new Date();
 			ObsProperty prop = getObsProperty("time");
 			prop.updateValue(data.getTime());
-			System.out.println(data.getTime());
+			signal("tick");
 		}
-	};
+	};*/
+	
+	@INTERNAL_OPERATION
+	void countRelogio() {
+		Date data = new Date();
+		ObsProperty prop = getObsProperty("time");
+		prop.updateValue(data.getTime());
+		await_time(INTERVALO_TEMPO);
+		signal("tick");
+	}
 	
 	}
