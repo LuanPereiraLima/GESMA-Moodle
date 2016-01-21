@@ -17,11 +17,11 @@ import cartago.*;
 
 public class Tempo extends Artifact{
 	
-	private final long INTERVALO_TEMPO = 1000;//24*60*60*1000;
+	private final long INTERVALO_TEMPO = 24*60*60*1000;//1000;//;
 	
 	void init() {
 		Date data = new Date();
-		defineObsProperty("time", data.getTime());
+		defineObsProperty("time", Long.parseLong("1347999999"));
 		//Timer tempo = new Timer();
 		execInternalOp("countRelogio");
 		//tempo.schedule(tick, 0, INTERVALO_TEMPO);
@@ -39,11 +39,18 @@ public class Tempo extends Artifact{
 	
 	@INTERNAL_OPERATION
 	void countRelogio() {
-		Date data = new Date();
-		ObsProperty prop = getObsProperty("time");
-		prop.updateValue(data.getTime());
-		await_time(INTERVALO_TEMPO);
-		signal("tick");
+		//while(true){
+			/*Date data = new Date();
+			ObsProperty prop = getObsProperty("time");
+			
+			try {
+				Thread.sleep(INTERVALO_TEMPO);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			prop.updateValue(data.getTime());*/
+			signal("tick");
+		//}
 	}
 	
 	}

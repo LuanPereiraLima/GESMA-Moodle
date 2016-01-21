@@ -9,6 +9,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import cartago.OPERATION;
+
 public class ManageCurso {
 	 private static SessionFactory factory;
 	 
@@ -19,7 +21,7 @@ public class ManageCurso {
 			 System.err.println("Failed to create sessionFactory object." + ex);
 			 throw new ExceptionInInitializerError(ex);
 		}
-		ManageCurso ME = new ManageCurso();
+		//ManageCurso ME = new ManageCurso();
 		//ME.listObjetos();
 	 }
 	 
@@ -27,10 +29,11 @@ public class ManageCurso {
 		 Session session = factory.openSession();
 		 Transaction tx = null;
 		 try{
-		 
+			 
+			 System.out.println("entrou!");
 			 tx = session.beginTransaction();
 		 
-			 Query query = session.createQuery("FROM Curso where timecreated > :time");
+			 Query query = session.createQuery("FROM Curso WHERE timecreated > :time");
 			 query.setParameter("time", time);
 			 List<Curso> objetos = query.list();
 		

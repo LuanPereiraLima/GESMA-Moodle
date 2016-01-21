@@ -12,7 +12,9 @@
 	makeArtifact("contador", "gesma_moodle.Tempo", [], ArtId);
 	focus(ArtId).
 	
-+!time(Tempo) <- .print("Tempo: ", Tempo).
++time(Tempo) <- makeArtifact("repositorio", "gesma_moodle.RepositorioCurso", [], IDArtifact);
+				focus(IDArtifact);
+				cursoApos(Tempo).
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }
